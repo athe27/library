@@ -1,15 +1,26 @@
 body {
     padding: 0;
     margin: 0;
-    height: 100vh;
     display: flex;
+    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.form {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    background-color: navajowhite;
+    width: 500px;
+    height: 500px;
 }
 
 .container {
     padding: 10px;
     flex: 0 0 500px;
+    width: 500px;
     background-color: rgb(129, 83, 61);
     display: flex;
     flex-direction: column;
