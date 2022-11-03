@@ -1,0 +1,40 @@
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    padding: 10px;
+    flex: 0 0 500px;
+    background-color: rgb(129, 83, 61);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.shelf {
+    flex: 0 0 100px;
+    background-color: rgba(0, 0, 0, 0.192);
+    display: flex;
+}
+
+.book {
+    height: 100%;
+    width: 5%;
+}
+
+.book:hover {
+    border-color: #f0f0f0;
+    box-shadow: 0 0 10px #f0f0f0;
+    z-index: 1;
+}
+
+.description {
+    position: absolute;
+    background-color: rgb(206, 206, 206);
+    padding: 10px;
+}
