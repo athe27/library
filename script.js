@@ -1,4 +1,5 @@
 let myLibrary = [1, 2, 3];
+const bookDescription = document.querySelector(".description")
 
 function Book(title, author, pages, read) {
     this.title = title
@@ -31,8 +32,21 @@ function displayBooks() {
         const book = document.createElement("div")
         book.classList.add("book")
         book.style.backgroundColor = generateRandomColor()
+        book.addEventListener("mouseover", (event) => {
+            bookDescription.style.display = "block";
+            let offsets  = book.getBoundingClientRect();
+            let x = offsets.left
+            let y = offsets.top + 100
+            bookDescription.style["z-index"] = "2"
+            bookDescription.style.left = `${x}px`
+            bookDescription.style.top = `${y}px`
+        })
+        book.addEventListener("mouseout", (event) => {
+            bookDescription.style.display = "none";
+        })
         shelves.item(row).appendChild(book)
     }
 }
 
 displayBooks()
+

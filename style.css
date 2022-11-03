@@ -28,12 +28,13 @@ body {
 }
 
 .book:hover {
-    border-color: #f0f0f0;
-    box-shadow: 0 0 10px #f0f0f0;
+    outline: 1px solid #000000;
+    box-shadow: 0 0 10px #000000;
     z-index: 1;
 }
 
 .description {
+    display: none;
     position: absolute;
     background-color: rgb(206, 206, 206);
     padding: 10px;
